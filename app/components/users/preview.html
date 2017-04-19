@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="styles/scss/main/tab.css">
+
+<div ng-controller="PreviewController as ctrl" class="basicForm roundedCorner">
+    
+    <div class="row">
+        <label><h1>Preview of your initiative</h1></label>
+    </div>
+    <div class="row">
+        <label>Title</label>
+        <label ng-bind="ctrl.newInitiative.title"></label>
+    </div>
+    
+    <div class="row">
+        <label>Description</label>
+        <label ng-bind="ctrl.newInitiative.desc"></label>
+    </div>
+    
+    <div class="row">
+        <label>Initiative Image</label>
+        <img src="#" alt="initiative image">
+    </div>
+    <div class="row">
+        <div >
+            <button type="submit" class="btn btn-success pull-right" ng-click="ctrl.share()">Share</button>
+            <button type="submit" class="btn btn-warning pull-right" ng-click="ctrl.cancel()">Cancel</button>
+        </div>
+        <button type="submit" class="btn btn-success pull-left" ng-click = "ctrl.gotoPreviousTab()">Back</button>
+    </div>
+    
+
+
+</div>

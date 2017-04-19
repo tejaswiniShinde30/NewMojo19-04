@@ -1,0 +1,18 @@
+{
+    "messages": {
+        "loginSuccess": "Login Success",
+        "loginFailed": "Login Failed",
+        "logoutSuccess": "Logout Success",
+        "logoutFailed": "Logout Failed",
+        "notAuthorized": "Unauthorized Access",
+        "somethingWrong":"Something Went Wrong",
+        "notAuthenticated":"Please Log In ",
+        "createUserSuccess" : "User Creation Successful"
+
+    },
+    "state": {
+        "success": "success",
+        "fail": "fail"
+    }
+
+}

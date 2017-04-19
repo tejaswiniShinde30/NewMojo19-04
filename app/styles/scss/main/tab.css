@@ -1,0 +1,41 @@
+input {
+            & {
+                box-shadow: none;
+                border: 0;
+                border-bottom: 1px solid black;
+                border-radius: 0;
+                font-size: 1.2em;
+                margin-top: 25px;
+                height: 25px;
+            }
+            @include hover-state {
+                box-shadow: none;
+                border-color: #000;
+            }
+        }
+
+.basicForm{
+    margin-top: 70px;
+    margin-left: 60px;
+    width: 60%;
+    background-color: white;
+        opacity: 0.9;
+        box-shadow: 0 0 20px $login-box-shadow;
+       
+}
+.roundedCorner { 
+    display: inline-block;
+    padding: 30px; 30px; 30px; 30px;
+    width:50%;height:50%; 
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 10px -10px 5px rgba(0,0,0,0.6); 
+    -moz-box-shadow: 10px -10px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 10px -10px 5px rgba(0,0,0,0.6);
+    -o-box-shadow: 10px -10px 5px rgba(0,0,0,0.6); border-radius:25px;
+}
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: grey;
+}

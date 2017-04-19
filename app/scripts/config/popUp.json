@@ -1,0 +1,60 @@
+{
+    "deactivate": {
+        "modal_header": "Confirmation",
+        "modal_body": "Are you sure you want to deactivate the user?",
+        "showOk": true,
+        "showDisplay": "Yes",
+        "showCancel":true
+    },
+    "activate": {
+        "modal_header": "Confirmation",
+        "modal_body": "Are you sure you want to activate the user?",
+        "showOk": true,
+        "showDisplay": "Yes",
+        "showCancel":true
+    },
+    "resend_activation": {
+        "modal_header": "Confirmation",
+        "modal_body": "Activation link is sent to your registered Email ID.",
+        "showOk": true,
+        "showDisplay": "Ok",
+        "showCancel":false
+    },
+    "registartion_success": {
+        "modal_header": "Confirmation",
+        "modal_body": "You have registered successfully.",
+        "showOk": true,
+        "showDisplay": "Ok",
+        "showCancel":false
+    },
+     "registartion_failure": {
+        "modal_header": "Failure",
+        "modal_body": "Link is not valid.",
+        "showOk": true,
+        "showDisplay": "Ok",
+        "showCancel":false
+    },
+    "changePassword_success": {
+        "modal_header": "Confirmation",
+        "modal_body": "Password changed successfully.",
+        "showOk": true,
+        "showDisplay": "Ok",
+        "showCancel":false
+    },
+    "failure": {
+        "modal_header": "Failure",
+        "modal_body": "Please try again later.",
+        "showOk": true,
+        "showDisplay": "Ok",
+        "showCancel":false
+    },
+    "user_success": {
+        "modal_header": "Confirmation",
+        "modal_body": "User details saved successfully.",
+        "showOk": true,
+        "showDisplay": "Ok",
+        "showCancel":false
+    }
+
+
+}

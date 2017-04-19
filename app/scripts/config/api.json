@@ -1,0 +1,120 @@
+{
+    "userList": {
+        "param": {
+            "facility": "facility",
+            "lastName": "lastName",
+            "type": "type",
+            "status": "status",
+            "order": "order",
+            "sort": "sort",
+            "size": "size",
+            "page": "page"
+        },
+        "order": {
+            "asc": "asc",
+            "desc": "desc"
+        },
+        "sort": {
+            "email": "email",
+            "firstName": "firstName",
+            "lastName": "lastName",
+            "status": "status",
+            "role": "role",
+            "facility": "facility"
+        },
+        "total": {
+            "count": "x-total-count",
+            "page": "x-total-pages"
+        }
+    },
+    "orderList": {
+        "param": {
+            "order": "order",
+            "sort": "sort",
+            "size": "size",
+            "page": "page"
+        },
+        "sortOrder": {
+            "asc": "asc",
+            "desc": "desc"
+        },
+        "sort": {
+            "orderId": "orderId",
+            "patient": "patient",
+            "mrn": "mrn",
+            "facility": "facility",
+            "orderingProvider": "orderingProvider",
+            "orderDate": "orderDate",
+            "status": "status"
+        },
+        "total": {
+            "count": "x-total-count",
+            "page": "x-total-pages"
+        }
+    },
+    "patientList": {
+        "param": {
+            "searchString": "searchString",
+            "order": "order",
+            "sort": "sort",
+            "size": "size",
+            "page": "page"
+        },
+        "sortOrder": {
+            "asc": "asc",
+            "desc": "desc"
+        },
+        "sort": {
+            "firstName": "firstName",
+            "mrn": "mrn",
+            "facility": "facility",
+            "dob": "dob"
+        },
+        "total": {
+            "count": "x-total-count",
+            "page": "x-total-pages"
+        }
+    },
+    "dashboardOrderList": {
+        "param": {
+            "reportType": "reportType",
+            "order": "order",
+            "sort": "sort",
+            "size": "size",
+            "page": "page"
+        },
+        "sortOrder": {
+            "asc": "asc",
+            "desc": "desc"
+        },
+        "sort": {
+            "orderId": "orderId",
+            "reportType": "reportType",
+            "reportDate" : "reportDate",
+            "patientName": "firstName",
+            "mrn": "mrn",
+            "orderingProvider": "orderingProvider",
+            "testName" : "testName",
+            "orderDate": "orderDate",
+            "orderStatus": "orderStatus"
+        },
+        "total": {
+            "count": "x-total-count",
+            "page": "x-total-pages"
+		}
+	},
+    "search": {
+        "param": {
+            "searchString": "orderSearchString",
+            "searchType" : "searchType",
+            "size": "size",
+            "page": "page"
+        },
+        "total": {
+            "count": "x-total-count",
+            "page": "x-total-pages",
+            "currentPage" : "x-current-page"
+
+        }
+    }
+}

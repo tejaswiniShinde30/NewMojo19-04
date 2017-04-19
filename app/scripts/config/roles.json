@@ -1,0 +1,14 @@
+{
+    "user": {
+        "name": "user",
+        "id": 1,
+        "showNPI": false,
+				"value":"ROLE_USER"
+    },
+    "admin": {
+        "name": "Admin",
+        "id": 3,
+        "showNPI": false,
+				"value":"ROLE_ADMIN"
+    }
+}

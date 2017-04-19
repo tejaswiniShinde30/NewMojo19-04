@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="styles/scss/main/tab.css">
+<div ng-controller="AdvanceController as ctrl">
+    <form class="basicForm roundedCorner" name="basicForm">
+        <div>
+            <div class="form-group">
+                <label for="initiative_photo">File input</label>
+                <input type="file" fileinput="file" filepreview="filepreview" accept="image/*" ng-model="ctrl.initiative_photo" id="initiative_photo"/>
+                <!--<input type="file" ng-model="ctrl.initiative_photo" accept="image/*" >-->
+                <p class="help-block">Please select file</p>
+            </div>
+            <div class="form-group">
+                <img ng-src="{{filepreview}}" class="img-responsive"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <button type="submit" class="btn btn-success pull-right" ng-click = "ctrl.gotoNextTab()">Next</button>
+            <button type="submit" class="btn btn-success pull-left" ng-click = "ctrl.gotoPreviousTab()">Back</button>
+        </div>
+        <!--<div >
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-4">
+                            <input type="file" fileinput="file" filepreview="filepreview"/>
+                        </div>
+            <div class="col-md-6">
+                <img ng-src="{{filepreview}}" class="img-responsive" ng-show="filepreview"/>
+            </div>
+    
+   
+  </div>
+</div>
+        </div>-->
+        
+        
+        
+    </form>
+    
+</div>

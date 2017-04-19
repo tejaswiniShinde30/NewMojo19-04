@@ -1,0 +1,118 @@
+<div class="navRibbon" ng-controller="DashboardController as ctrl">
+
+<div >
+
+    <div class="container-fluid" id="main-dashboard" st-pipe="ctrl.callServer" st-table="ctrl.displayed">
+        <div class="row header">
+            <div class="col-sm-3">
+                <h1>Dashboard</h1>
+            </div>
+            <!-- /.col-sm-2 -->
+            <div class="col-sm-2 col-sm-offset-7 order-test">
+                <button ui-sref="App.Orders.OrderTest" class="btn btn-info btn-lg ">Order Test</button>
+            </div>
+            <!-- /.col-sm-2 -->
+        </div>
+        <!-- /.row header -->
+        <div class=" container-fluid dasboard-data-indicator">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 dashboard-item " ng-class='{"active":ctrl.reportType=="ReadyToView"}' ng-click="ctrl.reportType='ReadyToView';ctrl.dashboardDefault();ctrl.callServer(ctrl.stState)">
+                    
+                    <!-- /.col-sm-3 -->
+                    <div class="col-xs-8 col-sm-9 col-md-8 dashboard-label">
+                        <span class="dashboard-label-text">Ready To View Reports</span>
+                    </div>
+                    <!-- /.col-sm-9 -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <!-- /.clearfix visible-xs-block -->
+                </div>
+                <!-- /.col-sm-3 -->
+                <div class="col-sm-6 col-md-3 dashboard-item" ng-class='{"active":ctrl.reportType=="RecentlyViewed"}' ng-click="ctrl.reportType='RecentlyViewed';ctrl.dashboardDefault();ctrl.callServer(ctrl.stState)">
+                    
+                    <!-- /.col-sm-3 -->
+                    <div class="col-xs-8 col-sm-9 col-md-8 dashboard-label">
+                        <span class="dashboard-label-text">Recently Viewed Reports</span>
+                    </div>
+                    <!-- /.col-sm-9 -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <!-- /.clearfix visible-xs-block -->
+                </div>
+                <!-- /.col-sm-3 -->
+                <div class="col-sm-6 col-md-3 dashboard-item" ng-class='{"active":ctrl.reportType=="Inprocess"}' ng-click="ctrl.reportType='Inprocess';ctrl.dashboardDefault();ctrl.callServer(ctrl.stState)">
+                    
+                    <!-- /.col-sm-3 -->
+                    <div class="col-xs-8 col-sm-9 col-md-8 dashboard-label">
+                        <span class="dashboard-label-text">In Progress Reports</span>
+                    </div>
+                    <!-- /.col-sm-9 -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <!-- /.clearfix visible-xs-block -->
+                </div>
+                <!-- /.col-sm-3 -->
+                <div class="col-sm-6 col-md-3 dashboard-item" ng-class='{"active":ctrl.reportType=="Archived"}' ng-click="ctrl.reportType='Archived';ctrl.dashboardDefault();ctrl.callServer(ctrl.stState)">
+                   
+                    <!-- /.col-sm-3 -->
+                    <div class="col-xs-8 col-sm-9 col-md-8 dashboard-label">
+                        <span class="dashboard-label-text">Archived Reports</span>
+                    </div>
+                    <!-- /.col-sm-9 -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <!-- /.clearfix visible-xs-block -->
+                </div>
+                <!-- /.col-sm-3 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        <div class="container-fluid dashboardRow">
+            <div class="row">
+                <div class="table-responsive app-dashboard">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th st-sort="{{ctrl.api.sort.orderId}}" st-sort-default="true" st-skip-natural="true">Order ID</th>
+                                <th st-sort="{{ctrl.api.sort.reportType}}" st-skip-natural="true">Report Type</th>
+                                <th st-sort="{{ctrl.api.sort.reportDate}}" st-skip-natural="true">Report Date</th>
+                                <th st-sort="{{ctrl.api.sort.patientName}}" st-skip-natural="true">Patient Name</th>
+                                <th st-sort="{{ctrl.api.sort.mrn}}" st-skip-natural="true">MRN</th>
+                                <th st-sort="{{ctrl.api.sort.orderingProvider}}" st-skip-natural="true">Ordering Provider</th>
+                                <th st-sort="{{ctrl.api.sort.testName}}" st-skip-natural="true">Test Name</th>
+                                <th st-sort="{{ctrl.api.sort.orderDate}}" st-skip-natural="true">Order Date</th>
+                                <th st-sort="{{ctrl.api.sort.orderStatus}}" st-skip-natural="true">Order Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tbody ng-show="!ctrl.isLoading">
+                                <tr ng-repeat="val in ctrl.displayed">
+                                    <td>
+                                        <a class="hand-pointer" ui-sref="App.Orders.OrderSearch({searchText:val.orderId})">{{val.orderId}}</a>
+                                    </td>
+                                    <td>
+                                        <a class="hand-pointer" tooltip-placement="bottom" uib-tooltip="{{val.reportFilename}}" ng-click="ctrl.viewReport(val.reportId,val.reportFilename)">{{val.reportType}}</a>
+                                    </td>
+                                    <td>{{ val.reportDate | date : ctrl.dateFormat}}</td>
+                                    <td><a class="hand-pointer" ui-sref="App.Patients.Search({searchText:val.patient.lastName+',' +val.patient.firstName, patientId:val.patient.id})">
+                                      {{val.patient.lastName | capitalize}},{{val.patient.firstName| capitalize}}</a>
+                                    </td>
+                                    <td>{{val.patient.mrn}}</td>
+                                    <td>{{val.orderingProvider.lastName| capitalize}} {{val.orderingProvider.firstName| capitalize}}</td>
+                                    <td>{{val.testName}}</td>
+                                    <td>{{ val.orderDate | date : ctrl.dateFormat}}</td>
+                                    <td>{{val.orderStatus}}</td>
+                                </tr>
+                            </tbody>
+                           
+                    </table>
+                </div>
+                
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.row dashboardRow -->
+    </div>
+   
+    <!-- /.viewReportContainer -->
+</div>
+
+
+    </div>
